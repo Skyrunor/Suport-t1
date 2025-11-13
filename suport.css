@@ -3,16 +3,14 @@
       padding: 0;
       box-sizing: border-box;
 }
-
 body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
 }
-
-
-header {
+header{
+    font-size: 20px;
     background-color: #007BFF;
+    position:absolute;
     color: white;
     display: flex;
     align-items: center;
@@ -20,16 +18,13 @@ header {
     height: 60px;
     position: relative;
 }
-
 header h1{
     font-size: 24px;
 }
-
 .hamburger{
     position: absolute;
     left: 20px;
     top: 50%;
-    
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -40,14 +35,24 @@ header h1{
     height: 3px;
     background-color: white;
 }
+.imagem{
+   display:flex;
+   flex-direction: column;
+   left: 60px;
+   width: 25%;
+   height: 0%;
+}
+.imaginex{
+    position-try-order: initial;
+    background-position: cover;
 
+}
 .contacts {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-
 .contact {
     border: 1px solid #ccc;
     padding: 10px;
@@ -68,14 +73,26 @@ header h1{
     text-decoration: underline;
     display: block;
     margin-bottom: 2px;
-}  
-@media (max-width: 900px) {
-      .contacts {
+}
+.floatingBtn{
+    bottom: 15px;
+    left: 15px;
+    background-color: #007BFF;
+    border-radius: 999px;
+    padding: 12px 22px;
+    box-shadow: 0.3px;
+    cursor: pointer;
+}
+.floatingBtn:hover{
+    background:none;
+}
+@media (max-width: 900px){
+      .contacts{
         grid-template-columns: repeat(2, 1fr);
     }
-}   
-@media (max-width: 500px) {
-      .contacts {
-        grid-template-columns: 1fr;
+}
+@media (max-width: 500px){
+    .contacts{
+    grid-template-columns: 1fr;
     }
 }
