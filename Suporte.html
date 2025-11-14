@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte PROCON</title>
+<link rel="stylesheet" href="./suport.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    /*tabela com as informações*/
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background: #005eb6;
+        color: white;
+        text-align: left;
+        font-size: 16px;
+    }
+    tr:nth-child(even) {
+        background: #f3f7fc;
+    }
+    /* links normais */
+    a {
+        color: #0053a6;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    /* cor quando o usuário já clicou */
+    a:visited {
+        color: #7a0099;
+    }
+    /* hover */
+    a:hover {
+        text-decoration: underline;
+    }
+    /*Imagens do canto inferior esquerdo*/
+    .hamburger {
+        position: fixed;
+        background-size: 30px 30px;
+        grid-template-columns: auto auto;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-grow: left;
+        gap: 100px;
+        justify-content: flex-end;
+        margin-top: 500px;
+        z-index: 50;
+}
+    .btn-img {
+        border-style: hidden;
+        position: relative;
+        width: 80px;
+        width: fit-content;
+        height: 80px;
+        margin: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .btn-img:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+    .btn-img img {
+        border-radius: 999px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+    .msg {
+        font-family:'Montserrat',sans-serif;
+        display: grid;
+        flex-grow: 100px;
+        position: absolute;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+        background-image: rgba(49, 110, 231, 0.03);
+        background-size: 50px;
+        color: #007bff;
+        font-size: 18px;
+        font-weight: 70px;
+        text-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+    .msg1 {
+        left: -120px;
+        bottom: 50px;
+}
+    .msg2 {
+        left: -105px;
+        bottom: 25px;
+}
+</style>
+</head>
+<body>
+<header class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1 class="title">Suporte</h1>
+    </header>
+<div class="container">
+    <img src="./WhatsApp_Image_2025-11-04_at_20.47.17-removebg-preview.png" alt="Imagem" class="lado-esquerdo">
+    <div class="texto">
+        <p>HuMap</p>
+        <p>Telefone: 9999-9999</p>
+        <p>Email: contato@humap.srv.br</p>
+    </div>
+</div>
+<main class="main">
+<h1>Contatos de Órgãos Públicos</h1>
+
+<table>
+    <tr>
+        <th>Órgão</th>
+        <th>Segmento</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+    </tr>
+
+    <!-- Ministério da Saúde -->
+    <tr>
+        <td>Ministério da Saúde (Ouvidoria do SUS)</td>
+        <td>Saúde</td>
+        <td>136</td>
+        <td>(via Fala.BR)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">
+                gov.br/saude – OuvSUS
+            </a>
+        </td>
+    </tr>
+
+    <!-- INSS -->
+    <tr>
+        <td>INSS – Central 135</td>
+        <td>Previdência</td>
+        <td>135</td>
+        <td>(via Meu INSS/Fale Conosco)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/inss" target="_blank">gov.br/inss – Central 135</a>
+        </td>
+    </tr>
+    <!-- IBGE -->
+    <tr>
+        <td>IBGE</td>
+        <td>Estatística</td>
+        <td>0800 721 8181</td>
+        <td>ibge@ibge.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://ibge.gov.br/atendimento" target="_blank">ibge.gov.br/atendimento</a>
+        </td>
+    </tr>
+    <!-- ANVISA -->
+    <tr>
+        <td>ANVISA</td>
+        <td>Vigilância Sanitária</td>
+        <td>0800 642 9782</td>
+        <td>(via Fale Conosco)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/anvisa" target="_blank">gov.br/anvisa – Canais de Atendimento</a>
+        </td>
+    </tr>
+    <!-- ANATEL -->
+    <tr>
+        <td>ANATEL</td>
+        <td>Telecom</td>
+        <td>1331</td>
+        <td>(via sistema Anatel Consumidor)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.anatel.gov.br" target="_blank">anatel.gov.br – Contato</a>
+        </td>
+    </tr>
+    <!-- ANAC -->
+    <tr>
+        <td>ANAC</td>
+        <td>Aviação Civil</td>
+        <td>163</td>
+        <td>(via Ouvidoria)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/anac" target="_blank">gov.br/anac – Ouvidoria</a>
+        </td>
+    </tr>
+    <!-- MDS -->
+    <tr>
+        <td>MDS – Desenvolvimento e Assistência Social</td>
+        <td>Assistência Social</td>
+        <td>121</td>
+        <td>(via Ouvidoria/Fale Conosco)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/mds" target="_blank">gov.br/mds – Canais/Ouvidoria</a>
+        </td>
+    </tr>
+    <!-- Ministério da Justiça -->
+    <tr>
+        <td>Ministério da Justiça – Ouvidoria-Geral</td>
+        <td>Justiça/Segurança</td>
+        <td>(61) 2025-7999 / 9933</td>
+        <td>ouvidoriageral@mj.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/mj" target="_blank">gov.br/mj – Ouvidoria-Geral</a>
+        </td>
+    </tr>
+    <!-- DNIT -->
+    <tr>
+        <td>DNIT</td>
+        <td>Infraestrutura/Transportes</td>
+        <td>(61) 3315-4000</td>
+        <td>multas@dnit.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://servicos.dnit.gov.br/multas" target="_blank">servicos.dnit.gov.br/multas</a>
+        </td>
+    </tr>
+
+    <!-- Polícia Federal -->
+    <tr>
+        <td>Polícia Federal – SR/PE</td>
+        <td>Segurança</td>
+        <td>(81) 2137-4001</td>
+        <td>gab.srpe@pf.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.gov.br/pf" target="_blank">gov.br/pf – SR/PE</a>
+        </td>
+    </tr>
+
+    <!-- Ouvidoria Geral PE -->
+    <tr>
+        <td>Ouvidoria Geral do Estado (PE)</td>
+        <td>Ouvidoria estadual</td>
+        <td>162</td>
+        <td>ouvidoria@ouvidoria.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://scge.pe.gov.br/ouvidoria-geral" target="_blank">scge.pe.gov.br/ouvidoria-geral</a>
+        </td>
+    </tr>
+
+    <!-- SES PE -->
+    <tr>
+        <td>Secretaria de Saúde de Pernambuco</td>
+        <td>Saúde (estadual)</td>
+        <td>136</td>
+        <td>ouvidoria@saude.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://portal.saude.pe.gov.br/ouvidoria" target="_blank">portal.saude.pe.gov.br/ouvidoria</a>
+        </td>
+    </tr>
+
+    <!-- SEE PE -->
+    <tr>
+        <td>Secretaria de Educação e Esportes de PE</td>
+        <td>Educação</td>
+        <td>(81) 3183-8200</td>
+        <td>ouvidoria@educacao.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://portal.educacao.pe.gov.br" target="_blank">portal.educacao.pe.gov.br</a>
+        </td>
+    </tr>
+
+    <!-- SDS -->
+    <tr>
+        <td>Secretaria de Defesa Social de PE</td>
+        <td>Segurança (estadual)</td>
+        <td>0800 081 5001 / (81) 3183-5298</td>
+        <td>ouvidoria@sds.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://sds.pe.gov.br/ouvidoria" target="_blank">sds.pe.gov.br/ouvidoria</a>
+        </td>
+    </tr>
+
+    <!-- DETRAN PE -->
+    <tr>
+        <td>DETRAN-PE</td>
+        <td>Trânsito (estadual)</td>
+        <td>(81) 3184-8404/8405</td>
+        <td>ouvidoria@detran.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://www.detran.pe.gov.br/fale-conosco" target="_blank">detran.pe.gov.br/fale-conosco</a>
+        </td>
+    </tr>
+
+    <!-- CPRH -->
+    <tr>
+        <td>CPRH – Agência Estadual de Meio Ambiente</td>
+        <td>Meio ambiente</td>
+        <td>(81) 3182-8923</td>
+        <td>ouvidoriaambiental@cprh.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://cprh.pe.gov.br" target="_blank">cprh.pe.gov.br – Ouvidoria Ambiental</a>
+        </td>
+    </tr>
+
+    <!-- ALEPE -->
+    <tr>
+        <td>ALEPE – Assembleia Legislativa de PE</td>
+        <td>Legislativo estadual</td>
+        <td>(81) 3183-2211</td>
+        <td>ouvidoria@alepe.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://alepe.pe.gov.br" target="_blank">alepe.pe.gov.br – Ouvidoria</a>
+        </td>
+    </tr>
+
+    <!-- Defensoria -->
+    <tr>
+        <td>Defensoria Pública de Pernambuco</td>
+        <td>Assistência jurídica</td>
+        <td>(81) 3182-5357</td>
+        <td>atendimento@defensoria.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://defensoria.pe.def.br/enderecos" target="_blank">defensoria.pe.def.br/enderecos</a>
+        </td>
+    </tr>
+
+    <!-- Recife -->
+    <tr>
+        <td>Prefeitura do Recife (Transparência)</td>
+        <td>Prefeitura</td>
+        <td>(81) 3355-9001</td>
+        <td>transparencia@recife.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://transparencia.recife.pe.gov.br" target="_blank">transparencia.recife.pe.gov.br</a>
+        </td>
+    </tr>
+
+    <!-- CTTU -->
+    <tr>
+        <td>CTTU – Trânsito do Recife</td>
+        <td>Trânsito (municipal)</td>
+        <td>0800 081 1078 / (81) 3355-5300</td>
+        <td>cttu@recife.pe.gov.br</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <a href="https://cttu.recife.pe.gov.br" target="_blank">cttu.recife.pe.gov.br</a>
+        </td>
+    </tr>
+    <button class="floatingBtn" aria-label="Voltar">Voltar</button>
+</main>
+<div class="hamburger">
+    <div class="btn-img">
+    <img src="./feedback 1.png" alt="Imagem 1">
+    <div class="msg msg1">Chat</div>
+    <div class="msg msg2">Interativo</div>
+    </div>
+
+
+    <div class="btn-img">
+    <img src="./conversations 1.png" alt="Imagem 2">
+    <div class="msg msg1">Perguntas</div>
+    <div class="msg msg2">Enquetes</div>
+    </div>
+</div>
+
+</body>
+</html>
