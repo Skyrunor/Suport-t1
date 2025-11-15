@@ -1,27 +1,28 @@
-class Carro: 
-    def __init__(self,marca,modelo,cor):
-        self.marca = marca
-        self.modelo = modelo
-        self.cor = cor
-        self.ligado = False
+class ContaBancaria:
+    def __init__(self,titular,saldo_inicial):
+        self.titular = titular # Atributo público
+        self.__saldo=saldo_inicial #Atributo privado
 
-        def ligar(self): 
-            if not self.ligado:
-                self.ligado = True
-                print(f"O {self.marca} {self.modelo} ligou.")
-            else:
-                print(f"{self.modelo} ja esta ligado.")
-        def status (self):
-            estado = "ligado" if self.ligado else "desligado"
-            print(f"Status do {self.modelo} : {estado}")
-
-        meu_carro = Carro("Toyota", "Corolla", "Prata")
-
-        meu_carro = Carro("Honda", "Civic", "Preto")
-
-        print(f"Marca do meu carro: {meu.carro.marca}")
-        meu_carro.status()
-        meu_carro.ligar()
-        meu_carro.status()
-
-        print(f"Cor do carro do amigo: 88{carro_amigo.cor}")
+    def depositar(self,valor):
+        if valor > 0:
+            self.__saldo += valor
+            print(f"Depósito de R${valor} realizado com sucesso!")
+        else:
+            print(f"Saque de R${valor} realizado com sucesso!")
+    def sacar(self,valor):
+        if valor <= self.__saldo:
+            self.__saldo-=valor
+            print(f"Saque de R${valor} realizado com sucesso!")
+        else:
+            print(f"Saldo insuficiente oara saque.")
+        
+    def verificar_saldo(self):
+        print(f"Saldo atual:{self.__saldo}")
+#Testando a classe
+conta = ContaBancaria("João",1000)
+conta.verificar_saldo()#saldo atual: R$1000
+conta.depositar(500)#Depósito de R$500 realizado
+conta.verificar_saldo()#saldo atual: R$1500
+conta.sacar(2000)#Saldo insuficiente
+conta.sacar(300)#Saque de R$300 realizido
+conta.verificar_saldo()#Saldo atual: R$1200
