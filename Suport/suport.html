@@ -11,13 +11,13 @@
 
 <style>
 /* RESET GLOBAL – remove o espaço branco lateral */
-* {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+    html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden; /* impede scroll lateral */
@@ -26,27 +26,27 @@ html, body {
 }
 
 /* Ajusta container que estava estourando a largura */
-.container {
+    .container {
     display: flex;
     align-items: center;
     gap: 20px;
     width: 100%;
     padding: 10px 15px;
 }
-.container img {
+    .container img {
     max-width: 120px;
     height: auto;
     display: block;
 }
 /* tabela com as informações */
-table {
+    table {
     width: 100%;
     
     background: white;
     border-radius: 10px;
     overflow: hidden;
 }
-th, td {
+    th, td {
     padding: 12px 14px;
     border-bottom: 1px solid #ddd;
 }
@@ -80,7 +80,7 @@ th, td {
     z-index: 999;
 }
 
-.btn-img {
+    .btn-img {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -100,13 +100,13 @@ th, td {
     box-shadow: 0 4px 12px rgba(0,0,0,0.20);
 }
 
-.btn-img:hover {
+    .btn-img:hover {
     background: #005bb8;
     transform: scale(1.04);
     box-shadow: 0 6px 18px rgba(0,0,0,0.28);
 }
 
-.btn-img img {
+    .btn-img img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -115,7 +115,7 @@ th, td {
     padding: 3px;
 }
 
-.btn-text {
+    .btn-text {
     display: flex;
     flex-direction: column;
     line-height: 16px;
@@ -123,36 +123,26 @@ th, td {
     color: white;
 }
 
-.btn-text span {
+    .btn-text span {
     font-size: 16px;
     font-weight: 600;
 }
 
-.btn-text small {
+    .btn-text small {
     font-size: 13px;
     opacity: 0.9;
 }
-</style>
-</head>
-
+    </style>
+    </head>
 <body>
-
-<header class="header">
-    <!-- Hamburger que no meu e so um "emoji" -->
-    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
-    <!--  -->
-    <h1 class="title">Suporte</h1>
-</header>
-
 <div class="container">
-    <img src="./WhatsApp_Image_2025-11-04_at_20.47.17-removebg-preview (1).png" alt="Imagem" class="lado-esquerdo">
+    <img src="./WhatsApp_Image_2025-11-04_at_20.47.17-removebg-preview.png" alt="Imagem" class="lado-esquerdo">
     <div class="texto">
         <p>HuMap</p>
         <p>Telefone: 9999-9999</p>
         <p>Email: contato@humap.srv.br</p>
     </div>
 </div>
-
 <main class="main" style="padding: 10px;">
 <h1>Contatos de Órgãos Públicos</h1>
 <table>

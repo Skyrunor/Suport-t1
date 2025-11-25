@@ -15,79 +15,16 @@
     text-align: center;
     margin-bottom: 25px;
 }
-    header {
-        background-color: #005bb5;
-        width: 100%;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        color: white;
-        font-family: Arial, sans-serif;
-}
-    /*Montserrat*/
-    .header h1{
-    font-family: 'Montserrat',sans-serif;
-    font-size: 2.8rem;
-    margin: 0;
-    letter-spacing: 1px;
-    text-align: center;
-    align-items: center;
-}
-    /*Icone do menu e etc*/
-    .menu-icon {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-}
-    .menu-icon span {
-        width: 55px;
-        height: 3px;
-        background-color: white;
-        border-radius: 2px;
-}
-    .menu-icon::before {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 14px;
-      height: 14px;
-      background-color: rgb(0, 123, 255);
-      border-radius: 50%;
-    }
-
-    .menu-icon::after {
-      content: "";
-      position: absolute;
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 22px;
-      height: 10px;
-      background-color: rgb(0, 123, 255);
-      border-radius: 12px 12px 0 0;
-    }
 /* Celulares pequenos (máx 500px) */
 /*Galera, uma molecula de DNA é pequena ou grande?*/
-
 /*Cabeçalho. Ela não é pequena nem grande...*/
-.title {
-        font-size: 22px;
-        font-weight: bold;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-}
-.icon {
+    .icon {
         width: 40px;
         height: auto;
         filter: invert(1);
 }
 /*===do HuMap===*/
-.imagem{
+    .imagem{
     display:flex;
     flex-direction: column;
     left: 60px;
@@ -95,44 +32,45 @@
     height: 0%;
 }
 /*Números e Contatos*/
-.contacts {
+    .contacts {
     margin-top: 40px;
     display: grid;
     position: relative;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
-.contact {
+    .contact {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
 }
-.contact h2 {
+    .contact h2 {
     font-size: 16px;
     margin-bottom: 5px;
 }
-.contact a.phone {
+    .contact a.phone {
     color: #007BFF;
     text-decoration: none;
     display: flex;
     margin-bottom: 2px;
 }
-.contact a.email {
+    .contact a.email {
     color: black;
     text-decoration: underline;
     display: flex;
     margin-bottom: 2px;
 }
 /*Botão Flutuante HAHA SKYRUNOR RULES!*/
-.floatingBtn{
+    .floatingBtn{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     align-items: center;
     text-align: center;
     position: fixed;
-    bottom: 20px;
-    width: 200px;
+    left: 20px;
+    bottom: 15px;
+    width: 150px;
     height: 75px;
     background-color: #007BFF;
     color: white;
@@ -147,40 +85,25 @@
     gap: 10px;
     z-index: 999;
 }
-.floatingBtn:hover{
+    .floatingBtn:hover{
     transition: all 0.25s ease;
     background-color: rgb(0, 105, 220);
-    transform: translateY(-3px);
+    transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
-.menu-btn {
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-    background-color: #005bb5;
-    border: none;
-    padding: 12px 16px;
-    transition: 0.3s;
-}
-.menu-btn:hover {
-    background-color: #005bb5;
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    overflow: hidden;
-}
-.container {
+    .container {
         display: flex;
         align-items: center;
         gap: 15px;
         padding: 10px;
         width: fit-content;
     }
-.lado-esquerdo {
+    .lado-esquerdo {
         width: 80px;
         height: auto;
         object-fit: contain;
 }
-.texto p {
+    .texto p {
         margin: 0;
         font-family: Arial, sans-serif;
         line-height: 1.3em;
@@ -189,17 +112,17 @@
     @media (max-width: 600px){
     .title {
     font-size: 18px;
-    }
+}
    .texto p {
     font-size: .9rem;
     max-width: 200px;
-    }
+}
     .header{
     width: 100%;
 
   }
 }
-@media (max-width: 800px){
+    @media (max-width: 800px){
     .title {
     font-size: 20px;
     }
@@ -225,7 +148,7 @@
 
   }
 }  
-@media (max-width: 1024px) {
+    @media (max-width: 1024px) {
     table th, table td {
         padding: 10px;
         font-size: 14px;
@@ -233,7 +156,7 @@
 }
 
 /* 🟩 900px → tabela vira 2 colunas (mas mantém a linha de links) */
-@media (max-width: 900px) {
+    @media (max-width: 900px) {
     table {
         font-size: 14px;
     }
@@ -250,7 +173,7 @@
 }
 
 /* 🟨 700px → vira 1 coluna, leitura estilo “cards empilhados” */
-@media (max-width: 700px) {
+    @media (max-width: 700px) {
     /* transforma cada órgão em bloco vertical */
     table tr {
         display: block;
@@ -306,7 +229,7 @@
 }
 
 /* 🟥 480px → otimização final no celular */
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
     .title {
         font-size: 20px;
     }
