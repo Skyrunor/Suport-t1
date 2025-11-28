@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte HuMap</title>
+
+<!-- CSS EXTERNO -->
+<link rel="stylesheet" href="./suport.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+         /* HEADER */
+        .header {
+            background-color: #005BB5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 78px;
+            width: 100%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ELEMENTOS INTERATIVOS COM MESMO HOVER DO PERFIL */
+        .menu-icon,
+        .plus-outline,
+        .floating-button {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-icon:hover,
+        .plus-outline:hover,
+        .floating-button:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-icon {
+            position: absolute;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 35px;
+            height: 30px;
+        }
+
+        .menu-icon span {
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+        }
+
+    .profile {
+            position: absolute;
+            left: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+}
+
+        .profile:hover {
+            transform: translateY(-50%) scale(1.05);
+}
+    .profile-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            position: relative;
+}
+
+    .profile-icon::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 11px;
+            height: 11px;
+            background-color: #005BB5;
+            border-radius: 50%;
+        }
+
+    .profile-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 8px;
+            background-color: #005BB5;
+            border-radius: 10px 10px 0 0;
+}
+
+    .profile-text {
+            font-size: 10px;
+            margin-top: 2px;
+            white-space: nowrap;
+            font-family: 'Montserrat', sans-serif;
+    }
+
+    .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+    }
+    /*Header dos Cara Noi slc AUUAUAUUAAUAUUA!*/
+    /* ---------- RESET ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ruda:wght@400..900&display=swap');
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------- AJUSTES DE LARGURA ---------- */
+    html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+}
+    body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 180px;
+}
+    main{
+    font-family: arial, sans-serif;
+}
+    main h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ---------- ÍCONES ---------- */
+    .headerIcon-Suport {
+    width: 40px;
+    height: auto;
+    filter: invert(1);
+}
+
+/* ---------- IMAGEM HUMAP ---------- */
+    .humapImageBox-Suport{
+    display:flex;
+    flex-direction: column;
+    left: 60px;
+    width: 25%;
+    height: 0%;
+}
+
+/* ---------- CONTATOS GRID ---------- */
+    .contactsGrid-Suport {
+    margin-top: 40px;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+        .contactCard-Suport {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+    .contactCard-Suport h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+    .contactCard-Suport a.phone {
+    color: #007BFF;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 2px;
+}
+    .contactCard-Suport a.email {
+    color: black;
+    text-decoration: underline;
+    display: flex;
+    margin-bottom: 2px;
+}
+/* ---------- BOTÃO FLUTUANTE ---------- */
+    .InferiorEsquerdaButton-Suport{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    left: 20px;
+    bottom: 15px;
+    width: 150px;
+    height: 75px;
+    background-color: #007BFF;
+    color: white;
+    display: center;
+    border: none;
+    border-radius: 999px;
+    padding: 18px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    gap: 10px;
+    z-index: 999;
+}
+    .InferiorEsquerdaButton-Suport:hover{
+    transition: all 0.25s ease;
+    background-color: rgb(0, 105, 220);
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- HEADER SUPERIOR ---------- */
+
+    .layoutContainer-Suport {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    width: fit-content;
+}
+    .logoImage-Suport {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+    .infoText-Suport p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.3em;
+}
+    /* ---------- TABELA ---------- */
+    .layoutContainer-Suport {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px 15px;
+    }
+    .layoutContainer-Suport img {
+    max-width: 120px;
+    height: auto;
+    }
+    table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed; /* colunas com larguras iguais */
+    }
+
+    th, td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #ddd;
+    }
+
+    th {
+    padding: 20px;
+    background: #005eb6;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    width: calc(100% / 5); /* divide em 5 partes iguais */
+    }
+    tr:nth-child(even) {
+    background: #f3f7fc;
+    }
+    a {
+    color: #0053a6;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+/* ---------- BOTÕES FIXOS DIREITA ---------- */
+    .sideFloatingButtons-Suport {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 999;
+    }
+    .sideButton-Suport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    height: 70px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+    }
+    .sideButton-Suport:hover {
+    background: #005bb8;
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+    }
+    .sideButton-Suport img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 3px;
+    }
+    .sideButtonLabel-Suport {
+    display: flex;
+    flex-direction: column;
+    line-height: 16px;
+    text-align: left;
+    color: white;
+    }
+    .sideButtonLabel-Suport span {
+    font-size: 16px;
+    font-weight: 600;
+    }
+    .sideButtonLabel-Suport small {
+    font-size: 13px;
+    opacity: 0.9;
+    }
+/* ---------- CELULARES ---------- */
+    @media (max-width: 700px) {
+    table tr {
+        display: block;
+        margin-bottom: 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    table td, table th {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+        padding: 8px 4px;
+    }
+    table th {
+        display: none;
+    }
+    table tr td[colspan="4"] {
+        padding-top: 0;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .backButtonFloating-Suport {
+        width: 80px;
+        height: 45px;
+        font-size: 16px;
+        padding: 10px 18px;
+        display: center;
+    }
+
+    .sideFloatingButtons-Suport {
+        gap: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .sideButton-Suport {
+        width: 60px;
+        height: 60px;
+    }
+    .sideButtonMsg-Suport {
+        font-size: 14px;
+    }
+}
+    @media (max-width: 480px) {
+    .sectionTitle-Suport {
+        font-size: 20px;
+    }
+    .layoutContainer-Suport img {
+        width: 60px;
+    }
+    .infoText-Suport p {
+        font-size: 14px;
+    }
+    .sideFloatingButtons-Suport {
+        gap: 25px;
+    }
+    .sideButton-Suport {
+        width: 50px;
+        height: 50px;
+    }
+    .sideButtonMsg-Suport {
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="layoutContainer-Suport">
+    <img src="./WhatsApp_Image_2025-11-04_at_20.47.17-removebg-preview.png" alt="Imagem do humap" class="logoImage-Suport">
+    <div class="infoText-Suport">
+        <p>HuMap</p>
+        <p>Telefone: 9999-9999</p>
+        <p>Email: contato@humap.srv.br</p>
+    </div>
+</div>
+<main class="main" style="padding: 10px;" alt="area_dos_contatos">
+<h1>Contatos de Órgãos Públicos</h1>
+<!-- (TABELA PERMANECE IGUAL) -->
+<table>
+    <tr>
+        <th>Site</th>
+        <th>Segmento</th>
+        <th>Instituição</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+    </tr>
+
+    <!-- Ministério da Saúde -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">
+            Ministério da Saúde (Ouvidoria do SUS)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">
+                gov.br/saude – OuvSUS
+            </a>
+        </td>
+        <td>Saúde</td>
+        <td>136</td>
+        <td>(via Fala.BR)</td>
+    </tr>
+
+    <!-- INSS -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">INSS – Central 135</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/inss" target="_blank">gov.br/inss – Central 135</a></td>
+        <td>Previdência</td>
+        <td>135</td>
+        <td>(via Meu INSS/Fale Conosco)</td>
+    </tr>
+
+    <!-- IBGE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">IBGE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://ibge.gov.br/atendimento" target="_blank">ibge.gov.br/atendimento</a></td>
+        <td>Estatística</td>
+        <td>0800 721 8181</td>
+        <td>ibge@ibge.gov.br</td>
+    </tr>
+
+    <!-- ANVISA -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">ANVISA</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/anvisa" target="_blank">gov.br/anvisa – Canais de Atendimento</a></td>
+        <td>Vigilância Sanitária</td>
+        <td>0800 642 9782</td>
+        <td>(via Fale Conosco)</td>
+    </tr>
+
+    <!-- ANATEL -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">ANATEL</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.anatel.gov.br" target="_blank">anatel.gov.br – Contato</a></td>
+        <td>Telecom</td>
+        <td>1331</td>
+        <td>(via sistema Anatel Consumidor)</td>
+    </tr>
+
+    <!-- ANAC -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">ANAC</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/anac" target="_blank">gov.br/anac – Ouvidoria</a></td>
+        <td>Aviação Civil</td>
+        <td>163</td>
+        <td>(via Ouvidoria)</td>
+    </tr>
+
+    <!-- MDS -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">
+            MDS – Desenvolvimento e Assistência Social
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/mds" target="_blank">gov.br/mds – Canais/Ouvidoria</a></td>
+        <td>Assistência Social</td>
+        <td>121</td>
+        <td>(via Ouvidoria/Fale Conosco)</td>
+    </tr>
+
+    <!-- Ministério da Justiça -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">
+            Ministério da Justiça – Ouvidoria-Geral
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/mj" target="_blank">gov.br/mj – Ouvidoria-Geral</a></td>
+        <td>Justiça/Segurança</td>
+        <td>(61) 2025-7999 / 9933</td>
+        <td>ouvidoriageral@mj.gov.br</td>
+    </tr>
+
+    <!-- DNIT -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">
+            DNIT
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://servicos.dnit.gov.br/multas" target="_blank">servicos.dnit.gov.br/multas</a></td>
+        <td>Infraestrutura/Transportes</td>
+        <td>(61) 3315-4000</td>
+        <td>multas@dnit.gov.br</td>
+    </tr>
+
+    <!-- Polícia Federal -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Polícia Federal – SR/PE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.gov.br/pf" target="_blank">gov.br/pf – SR/PE</a></td>
+        <td>Segurança</td>
+        <td>(81) 2137-4001</td>
+        <td>gab.srpe@pf.gov.br</td>
+    </tr>
+
+    <!-- Ouvidoria Geral PE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Ouvidoria Geral do Estado (PE)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://scge.pe.gov.br/ouvidoria-geral" target="_blank">scge.pe.gov.br/ouvidoria-geral</a></td>
+        <td>Ouvidoria estadual</td>
+        <td>162</td>
+        <td>ouvidoria@ouvidoria.pe.gov.br</td>
+    </tr>
+    <!-- SES PE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Secretaria de Saúde de Pernambuco</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://portal.saude.pe.gov.br/ouvidoria" target="_blank">portal.saude.pe.gov.br/ouvidoria</a></td>
+        <td>Saúde (estadual)</td>
+        <td>136</td>
+        <td>ouvidoria@saude.pe.gov.br</td>
+    </tr>
+    <!-- SEE PE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Secretaria de Educação e Esportes de PE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://portal.educacao.pe.gov.br" target="_blank">portal.educacao.pe.gov.br</a></td>
+        <td>Educação</td>
+        <td>(81) 3183-8200</td>
+        <td>ouvidoria@educacao.pe.gov.br</td>
+    </tr>
+
+    <!-- SDS -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Secretaria de Defesa Social de PE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://sds.pe.gov.br/ouvidoria" target="_blank">sds.pe.gov.br/ouvidoria</a></td>
+        <td>Segurança (estadual)</td>
+        <td>0800 081 5001 / (81) 3183-5298</td>
+        <td>ouvidoria@sds.pe.gov.br</td>
+    </tr>
+
+    <!-- DETRAN PE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">DETRAN-PE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://www.detran.pe.gov.br/fale-conosco" target="_blank">detran.pe.gov.br/fale-conosco</a></td>
+        <td>Trânsito (estadual)</td>
+        <td>(81) 3184-8404/8405</td>
+        <td>ouvidoria@detran.pe.gov.br</td>
+    </tr>
+
+    <!-- CPRH -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">CPRH – Agência Estadual de Meio Ambiente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://cprh.pe.gov.br" target="_blank">cprh.pe.gov.br – Ouvidoria Ambiental</a></td>
+        <td>Meio ambiente</td>
+        <td>(81) 3182-8923</td>
+        <td>ouvidoriaambiental@cprh.pe.gov.br</td>
+    </tr>
+
+    <!-- ALEPE -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">ALEPE – Assembleia Legislativa de PE</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://alepe.pe.gov.br" target="_blank">alepe.pe.gov.br – Ouvidoria</a></td>
+        <td>Legislativo estadual</td>
+        <td>(81) 3183-2211</td>
+        <td>ouvidoria@alepe.pe.gov.br</td>
+    </tr>
+
+    <!-- Defensoria -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Defensoria Pública de Pernambuco</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://defensoria.pe.def.br/enderecos" target="_blank">defensoria.pe.def.br/enderecos</a></td>
+        <td>Assistência jurídica</td>
+        <td>(81) 3182-5357</td>
+        <td>atendimento@defensoria.pe.gov.br</td>
+    </tr>
+
+    <!-- Recife -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">Prefeitura do Recife (Transparência)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://transparencia.recife.pe.gov.br" target="_blank">transparencia.recife.pe.gov.br</a></td>
+        <td>Prefeitura</td>
+        <td>(81) 3355-9001</td>
+        <td>transparencia@recife.pe.gov.br</td>
+    </tr>
+
+    <!-- CTTU -->
+    <tr>
+        <td class="higher" colspan="5" style="text-align:center;">CTTU – Trânsito do Recife</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="https://cttu.recife.pe.gov.br" target="_blank">cttu.recife.pe.gov.br</a></td>
+        <td>Trânsito (municipal)</td>
+        <td>0800 081 1078 / (81) 3355-5300</td>
+        <td>cttu@recife.pe.gov.br</td>
+    </tr>
+</table>
+
+<button class="InferiorEsquerdaButton-Suport" aria-label="Voltar">Voltar</button>
+</main>
+
+<!-- BOTÕES LATERAIS -->
+<div class="sideFloatingButtons-Suport">
+    <button class="sideButton-Suport">
+        <img src="./feedback.png">
+        <div class="sideButtonLabel-Suport">
+            <span>Chat</span>
+            <small class="sideButtonMsg-Suport">Interativo</small>
+        </div>
+    </button>
+
+    <button class="sideButton-Suport">
+        <img src="./conversations.png">
+        <div class="sideButtonLabel-Suport">
+            <span>Perguntas</span>
+            <small class="sideButtonMsg-Suport">enquetes</small>
+        </div>
+    </button>
+</div>
+
+</body>
+</html>

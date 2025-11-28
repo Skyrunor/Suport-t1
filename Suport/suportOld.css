@@ -1,0 +1,126 @@
+/* ---------- RESET ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ruda:wght@400..900&display=swap');
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------- AJUSTES DE LARGURA ---------- */
+    html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+}
+    body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 180px;
+}
+    main{
+    font-family: arial, sans-serif;
+}
+    main h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ---------- ÍCONES ---------- */
+    .headerIcon-Suport {
+    width: 40px;
+    height: auto;
+    filter: invert(1);
+}
+
+/* ---------- IMAGEM HUMAP ---------- */
+    .humapImageBox-Suport{
+    display:flex;
+    flex-direction: column;
+    left: 60px;
+    width: 25%;
+    height: 0%;
+}
+
+/* ---------- CONTATOS GRID ---------- */
+    .contactsGrid-Suport {
+    margin-top: 40px;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+        .contactCard-Suport {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+    .contactCard-Suport h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+    .contactCard-Suport a.phone {
+    color: #007BFF;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 2px;
+}
+    .contactCard-Suport a.email {
+    color: black;
+    text-decoration: underline;
+    display: flex;
+    margin-bottom: 2px;
+}
+/* ---------- BOTÃO FLUTUANTE ---------- */
+    .InferiorEsquerdaButton-Suport{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    left: 20px;
+    bottom: 15px;
+    width: 150px;
+    height: 75px;
+    background-color: #007BFF;
+    color: white;
+    display: center;
+    border: none;
+    border-radius: 999px;
+    padding: 18px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    gap: 10px;
+    z-index: 999;
+}
+    .InferiorEsquerdaButton-Suport:hover{
+    transition: all 0.25s ease;
+    background-color: rgb(0, 105, 220);
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- HEADER SUPERIOR ---------- */
+
+    .layoutContainer-Suport {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    width: fit-content;
+}
+    .logoImage-Suport {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+    .infoText-Suport p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.3em;
+}

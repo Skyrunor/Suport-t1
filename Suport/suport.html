@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte HuMap</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./suport.css">
+
+<style>
+
+/* ========================= RESET ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    padding-bottom: 150px;
+    overflow-x: hidden;
+}
+
+/* ========================= HEADER ========================= */
+
+.header {
+    background-color: #005BB5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 78px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* ========================= LOGO HUMAP ========================= */
+
+.layoutContainer-Suport {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.logoImage-Suport {
+    width: 90px;
+}
+
+.infoText-Suport p {
+    font-size: 15px;
+}
+
+
+/* ========================= BOTÃO VOLTAR ========================= */
+
+.InferiorEsquerdaButton-Suport {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    left: 20px;
+    bottom: 15px;
+    width: 150px;
+    height: 75px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 18px 45px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+.InferiorEsquerdaButton-Suport:hover {
+    background-color: rgb(0, 105, 220);
+    transform: scale(1.05);
+}
+
+/* ========================= BOTÕES LATERAIS ========================= */
+
+.sideFloatingButtons-Suport {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 999;
+}
+
+.sideButton-Suport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    height: 70px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+}
+
+.sideButton-Suport img {
+    width: 45px;
+    background: white;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+/* ========================= ÁREA PRINCIPAL ========================= */
+
+main h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+/* ========================= CATEGORIAS (AS 4 FAIXAS) ========================= */
+
+.category-container {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.category-row {
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    padding: 22px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CORES */
+.red    { background: #B62323; }
+.yellow { background: #CDA500; }
+.blue   { background: #005BB5; }
+.green  { background: #1C8B3B; }
+
+/* INFO DA ESQUERDA */
+.category-info {
+    width: 45%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-info h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.category-icon {
+    width: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* ========================= CARROSSEL ========================= */
+
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    padding-bottom: 5px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    background-image: linear-gradient(white,rgb(214, 208, 200), rgba(0,0,0,0.25));
+    color: black;
+    min-width: 240px;
+    padding: 18px;
+    border-radius: 14px;
+    display: inline-block;
+}
+
+.carousel-item h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+</style>
+</head>
+<body>
+<!-- LOGO HUMAP -->
+<div class="layoutContainer-Suport">
+    <img src="./Design_sem_nome__1_-removebg-preview 1.png" class="logoImage-Suport">
+    <div class="infoText-Suport">
+        <p>HuMap</p>
+        <p>Telefone: 9999-9999</p>
+        <p>Email: contato@humap.srv.br</p>
+    </div>
+</div>
+
+<main>
+<h1>Contatos de Órgãos Públicos</h1>
+
+<!-- ========================================================= -->
+<!-- ███ 4 FAIXAS + 4 CARROSÉIS (COM TODOS OS ÓRGÃOS) ███ -->
+<!-- ========================================================= -->
+
+<div class="category-container">
+
+    <!-- 🔴 VIOLÊNCIA URBANA -->
+    <div class="category-row red">
+        <div class="category-info">
+            <img src="./icon-violencia.png" class="category-icon">
+            <h2>Violência urbana, assaltos e crimes de alta periculosidade</h2>
+        </div>
+
+        <div class="carousel">
+
+            <div class="carousel-item">
+                <h3>Polícia Federal – SR/PE</h3>
+                <p><strong>Telefone:</strong> (81) 2137-4001</p>
+                <p><strong>E-mail:</strong> gab.srpe@pf.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Secretaria de Defesa Social de PE</h3>
+                <p><strong>Telefone:</strong> 0800 081 5001 / (81) 3183-5298</p>
+                <p><strong>E-mail:</strong> ouvidoria@sds.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Ministério da Justiça – Ouvidoria Geral</h3>
+                <p><strong>Telefone:</strong> (61) 2025-7999 / 9933</p>
+                <p><strong>E-mail:</strong> ouvidoriageral@mj.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Ouvidoria Geral do Estado (PE)</h3>
+                <p><strong>Telefone:</strong> 162</p>
+                <p><strong>E-mail:</strong> ouvidoria@ouvidoria.pe.gov.br</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 🟡 SANEAMENTO / SAÚDE -->
+    <div class="category-row yellow">
+        <div class="category-info">
+            <img src="./icon-saneamento.png" class="category-icon">
+            <h2>Saneamento básico, saúde pública e vigilância sanitária</h2>
+        </div>
+
+        <div class="carousel">
+
+            <div class="carousel-item">
+                <h3>Ministério da Saúde — Ouvidoria do SUS</h3>
+                <p><strong>Telefone:</strong> 136</p>
+                <p><strong>E-mail:</strong> (via Fala BR)</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Secretaria de Saúde de Pernambuco</h3>
+                <p><strong>Telefone:</strong> 136</p>
+                <p><strong>E-mail:</strong> ouvidoria@saude.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>ANVISA</h3>
+                <p><strong>Telefone:</strong> 0800 642 9782</p>
+                <p><strong>E-mail:</strong> (via Fale Conosco)</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>IBGE</h3>
+                <p><strong>Telefone:</strong> 0800 721 8181</p>
+                <p><strong>E-mail:</strong> ibge@ibge.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>MDS – Assistência Social</h3>
+                <p><strong>Telefone:</strong> 121</p>
+                <p><strong>E-mail:</strong> (via Ouvidoria)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🔵 INFRAESTRUTURA / TRANSPORTE -->
+    <div class="category-row blue">
+        <div class="category-info">
+            <img src="./icon-transporte.png" class="category-icon">
+            <h2>Infraestrutura urbana, transporte público e vias</h2>
+        </div>
+
+        <div class="carousel">
+
+            <div class="carousel-item">
+                <h3>DNIT</h3>
+                <p><strong>Telefone:</strong> (61) 3315-4000</p>
+                <p><strong>E-mail:</strong> multas@dnit.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>DETRAN-PE</h3>
+                <p><strong>Telefone:</strong> (81) 3184-8404 / 8405</p>
+                <p><strong>E-mail:</strong> ouvidoria@detran.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>CTTU – Trânsito do Recife</h3>
+                <p><strong>Telefone:</strong> 0800 081 1078 / (81) 3355-5300</p>
+                <p><strong>E-mail:</strong> cttu@recife.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Prefeitura do Recife</h3>
+                <p><strong>Telefone:</strong> (81) 3355-9001</p>
+                <p><strong>E-mail:</strong> transparencia@recife.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>INSS</h3>
+                <p><strong>Telefone:</strong> 135</p>
+                <p><strong>E-mail:</strong> (via Meu INSS)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🟢 MEIO AMBIENTE / ANIMAIS -->
+    <div class="category-row green">
+        <div class="category-info">
+            <img src="./icon-meioambiente.png" class="category-icon">
+            <h2>Meio ambiente e proteção animal</h2>
+        </div>
+
+        <div class="carousel">
+
+            <div class="carousel-item">
+                <h3>CPRH – Meio Ambiente</h3>
+                <p><strong>Telefone:</strong> (81) 3182-8923</p>
+                <p><strong>E-mail:</strong> ouvidoriaambiental@cprh.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>ALEPE – Ouvidoria</h3>
+                <p><strong>Telefone:</strong> (81) 3183-2211</p>
+                <p><strong>E-mail:</strong> ouvidoria@alepe.pe.gov.br</p>
+            </div>
+
+            <div class="carousel-item">
+                <h3>Defensoria Pública de Pernambuco</h3>
+                <p><strong>Telefone:</strong> (81) 3182-5357</p>
+                <p><strong>E-mail:</strong> atendimento@defensoria.pe.gov.br</p>
+            </div>
+
+        </div>
+    </div>
+
+</div> <!-- fim categories -->
+
+</main>
+
+<!-- BOTÃO VOLTAR -->
+<button class="InferiorEsquerdaButton-Suport">Voltar</button>
+
+<!-- BOTÕES LATERAIS -->
+<div class="sideFloatingButtons-Suport">
+    <button class="sideButton-Suport">
+        <img src="./feedback.png">
+        <div>
+            <span>Chat</span><br>
+            <small>Interativo</small>
+        </div>
+    </button>
+
+    <button class="sideButton-Suport">
+        <img src="./conversations.png">
+        <div>
+            <span>Perguntas</span><br>
+            <small>Enquetes</small>
+        </div>
+    </button>
+</div>
+
+</body>
+</html>
