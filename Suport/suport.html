@@ -11,6 +11,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ruda:wght@400..900&display=swap');
+
 /* ========================= RESET ========================= */
 * {
     margin: 0;
@@ -25,8 +26,8 @@ body {
     padding-bottom: 150px;
     overflow-x: hidden;
 }
-/* ========================= HEADER ========================= */
 
+/* ========================= HEADER ========================= */
 .header {
     background-color: #005BB5;
     color: white;
@@ -39,10 +40,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-}
+.header h1 { font-size: 2.2rem; letter-spacing: 1px; }
 
 .navbar {
     width: 100%;
@@ -62,13 +60,13 @@ body {
     cursor: pointer;
     padding: 3rem;
 }
-
 .hamburger-suport span {
     width: 22px;
     height: 3px;
     background: #fff;
     border-radius: 3px;
 }
+
 /*Menu*/
 .menu {
     position: fixed;
@@ -83,17 +81,8 @@ body {
     flex-direction: column;
     z-index: 1000;
 }
-
-.menu.open {
-    left: 0;
-}
-.menu-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-}
-
+.menu.open { left: 0; }
+.menu-content { display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
 .menu-content a {
     color: white;
     font-size: 20px;
@@ -101,61 +90,30 @@ body {
     text-decoration: none;
     padding: 10px 0;
 }
-/*Fim do memu*/
-/* Botão de perfil */
-.perfil-btn {
-    background: none;
-    border: none;
-    margin-right: 2rem;
-    cursor: pointer;
-    padding: 3rem;
-}
 
-.perfil-btn span{
-    color: white;
-    width: 3rem;
-    height: 38px;
-    border-radius: 0%;
-}
-.perfil-btn p{
-    color: white;
-}
+/* Botão de perfil */
+.perfil-btn { background: none; border: none; margin-right: 2rem; cursor: pointer; padding: 3rem; }
+.perfil-btn span{ color: white; width: 3rem; height: 38px; border-radius: 0%; }
+.perfil-btn p{ color: white; }
 
 /* Área de pesquisa */
-.search-area {
-    flex: 1rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
+.search-area { flex: 1rem; position: relative; display: flex; align-items: center; }
 .search-area input {
     padding: 1rem;
-    width: 80%; /* diminui o tamanho */
-    height: 1rem; /* opcional */
+    width: 80%;
+    height: 1rem;
     padding-right: 5rem;
     border-radius: 2rem;
     border: 10rem;
     outline: none;
     font-size: 1rem;
 }
-
 /* Botão da lupa */
-.search-btn {
-    position: relative;
-    float: right;
-    background: none;
-    border: none;
-    cursor: pointer;
-    right: 2rem;
-}
+.search-btn { position: relative; float: right; background: none; border: none; cursor: pointer; right: 2rem; }
+.search-btn img { width: 20px; height: 20px; }
 
-.search-btn img {
-    width: 20px;
-    height: 20px;
-}
 .notify-btn {
-    background: #005BB5;   /* mesma cor do header */
+    background: #005BB5;
     border: none;
     cursor: pointer;
     padding: 12px;
@@ -164,31 +122,22 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .notify-btn img {
     filter: brightness(0) saturate(100%) invert(86%) sepia(98%) saturate(748%) hue-rotate(356deg) brightness(101%) contrast(106%);
     width: 28px;
 }
-/*Fim do Header*/
-/* ========================= LOGO HUMAP ========================= */
+
+/* LOGO HUMAP */
 .layoutContainer-Suport {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 15px;
-    position
 }
+.logoImage-Suport { transform:sclae(1.5); position: relative; }
+.infoText-Suport p { font-size: 15px; }
 
-.logoImage-Suport {
-    width: 150px;
-    height: 150px;
-}
-
-.infoText-Suport p {
-    font-size: 15px;
-}
-/* ========================= BOTÃO VOLTAR ========================= */
-
+/* BOTÃO VOLTAR */
 .InferiorEsquerdaButton-Suport {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -209,14 +158,9 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
     z-index: 999;
 }
+.InferiorEsquerdaButton-Suport:hover { background-color: rgb(0, 105, 220); transform: scale(1.05); }
 
-.InferiorEsquerdaButton-Suport:hover {
-    background-color: rgb(0, 105, 220);
-    transform: scale(1.05);
-}
-
-/* ========================= BOTÕES LATERAIS ========================= */
-
+/* BOTÕES LATERAIS */
 .sideFloatingButtons-Suport {
     position: fixed;
     bottom: 20px;
@@ -225,7 +169,6 @@ body {
     gap: 20px;
     z-index: 999;
 }
-
 .sideButton-Suport {
     display: flex;
     align-items: center;
@@ -241,7 +184,6 @@ body {
     transition: .3s;
     box-shadow: 0 4px 12px rgba(0,0,0,0.20);
 }
-
 .sideButton-Suport img {
     width: 45px;
     background: white;
@@ -249,16 +191,27 @@ body {
     border-radius: 50%;
 }
 
-/* ========================= ÁREA PRINCIPAL ========================= */
-
+/* ÁREA PRINCIPAL */
 main h1 {
     text-align: center;
     margin-top: 20px;
     font-size: 26px;
 }
 
-/* ========================= CATEGORIAS (AS 4 FAIXAS) ========================= */
-
+/* Parte Branca que acopla todos os contatos */
+.ParteBrancaCarrousel-Suport {
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    margin: 20px;
+    height: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    overflow: none;
+    z-index: 2;
+}
+/* Categorias */
 .category-container {
     width: 100%;
     margin-top: 35px;
@@ -272,7 +225,6 @@ main h1 {
 .yellow { background: #CDA500; }
 .blue   { background: #005BB5; }
 .green  { background: #1C8B3B; }
-
 /* INFO DA ESQUERDA */
 .category-row {
     width: 100%;
@@ -283,130 +235,134 @@ main h1 {
     align-items: center;
 }
 .category-info {
-    width: 45%;
+    width: 50%;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.category-info h2 {
-    font-size: 20px;
-    font-weight: 600;
-}
+.category-info h2 { font-size: 20px; font-weight: 600; }
+.category-icon { width: 40px; filter: brightness(0) invert(1); position: relative; }
 
-.category-icon {
-    width: 40px;
-    filter: brightness(0) invert(1);
-}
-.ParteBrancaCarrousel-Suport {
-    position: relative;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    width: 67%; /* ultrapassa a metade */
-    height: 100%;
-    border-radius: 999px;
-    padding: 30px;
-    margin-left: -10%;  /* invade área colorida */
-    overflow: hidden;
-    z-index: 3;
-
-}
 /* ========================= CARROSSEL ========================= */
-
-.car-left, .car-right {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: rgba(0,0,0,0.25);
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
+.carousel {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+}
+.carousel-inner {
+        display: flex;
+        width: 300%;
+        transition: transform 0.5s ease;
+}
+.carousel-item {
+        width: 5000px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        background: #f5f5f5;
+}
+.carousel-item:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+/**/
+.carousel-wrapper {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
 }
 
-.car-left { left: 5px; }
-.car-right { right: 5px; }
-
-.carousel {
+.carousel-wrapper .carousel {
     display: flex;
-    gap: 18px;
-    scroll-behavior: smooth;
+    gap: 5px;
     overflow: hidden;
+    scroll-behavior: smooth;
     width: 100%;
 }
 
-.carousel-item {
-    flex: 0 0 220px;
-    border-radius: 14px;
-    padding: 18px;
+.carousel-wrapper .carousel-item {
+    flex: 0 0 100%;
+    border-radius: 25px;
+    padding: 5px;
     background: rgba(255,255,255,0.7);
-    transform: scale(.85);
+    transform: scale(1);
     transition: .25s ease;
-    filter: brightness(.75);
-}
-
-.carousel-item.active {
-    transform: scale(1.03);
-    background: white;
     filter: brightness(1);
 }
 
+/* Botões dentro do carrossel */
+.carousel-wrapper .car-left,
+.carousel-wrapper .car-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(0, 91, 181, 0.8); /* leve transparência */
+    color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-wrapper .car-left { left: 10px; }
+.carousel-wrapper .car-right { right: 10px; }
+
+.carousel-wrapper .car-left:hover,
+.carousel-wrapper .car-right:hover {
+    background: #005BB5;
+}
 </style>
 </head>
 <body>
-     <aside id="menu" class="menu">
-        <div class="menu-content">
-            <a href="#">Feed</a>
-            <a href="#">Perfil</a>
-            <a href="#">Configurações</a>
-            <a href="#">Suporte</a>
-            <a href="#">Sobre Nós</a>
-            <a href="#">Tutorial</a>
-        </div>
-        <button id="btn-close" class="btn-close">Sair</button>
-    </aside>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+<aside id="menu" class="menu">
+    <div class="menu-content">
+        <a href="#">Feed</a>
+        <a href="#">Perfil</a>
+        <a href="#">Configurações</a>
+        <a href="#">Suporte</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Tutorial</a>
+    </div>
+    <button id="btn-close" class="btn-close">Sair</button>
+</aside>
 
-        <!-- Hambúrguer -->
-        <div id="hamburger" class="hamburger-suport">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div id="hamburger" class="hamburger-suport">
+        <span></span><span></span><span></span>
+    </div>
 
-        <!-- Perfil como BOTÃO -->
-        <button class="perfil-btn" onclick="window.location.href='/perfil.html'">
-            <span class="material-symbols-outlined">account_circle</span>
-            <p>Ola, Itala</p>
+    <button class="perfil-btn" onclick="window.location.href='/perfil.html'">
+        <span class="material-symbols-outlined">account_circle</span>
+        <p>Ola, Itala</p>
+    </button>
+
+    <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Pesquisar local..." oninput="showSuggestions()"/>
+        <button class="search-btn" onclick="goToSearch()"> 
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="lupa">
         </button>
+        <div id="suggestions" class="suggestions"></div>
+    </div>
 
-        <!-- Pesquisa -->
-        <div class="search-area">
-            <input type="text" id="searchInput" placeholder="Pesquisar local..."oninput="showSuggestions()"/>
+    <button id="notifyBtn" class="notify-btn">
+     <img src="https://cdn-icons-png.flaticon.com/512/3602/3602145.png" alt="notificaçães">       
+    </button>
+</nav>
 
-            <!-- Botão da lupa -->
-            <button class="search-btn" onclick="goToSearch()"> 
-                <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="lupa">
-            </button>
-
-            <!-- Sugestões de endereço -->
-            <div id="suggestions" class="suggestions">
-                <!-- Sugestões aparecem aqui via JS -->
-            </div>
-        </div>
-
-        <!-- Sininho -->
-        <button id="notifyBtn" class="notify-btn">
-         <img src="https://cdn-icons-png.flaticon.com/512/3602/3602145.png" alt="notificaçães">   
-            
-        </button>
-    </nav>
 <!-- LOGO HUMAP -->
 <div class="layoutContainer-Suport">
     <img src="./Design_sem_nome__1_-removebg-preview 1.png" class="logoImage-Suport">
@@ -420,254 +376,167 @@ main h1 {
 <main>
 <h1>Contatos de Órgãos Públicos</h1>
 
-<!-- ========================================================= -->
-<!-- ███ 4 FAIXAS + 4 CARROSÉIS (COM TODOS OS ÓRGÃOS) ███ -->
-<!-- ========================================================= -->
-
+<div class="ParteBrancaCarrousel-Suport">
 <div class="category-container">
 
-    <!-- 🔴 VIOLÊNCIA URBANA -->
-    <div class="category-row red">
-        <div class="category-info">
-            <img src="./icon-violencia.png" class="category-icon">
-            <h2>Violência urbana, assaltos e crimes de alta periculosidade</h2>
-        </div>
-        <div class="ParteBrancaCarrousel-Suport">
+<!-- 🔴 VIOLÊNCIA URBANA -->
+<div class="category-row red">
+    <div class="category-info">
+        <img src="./triangle-alert.png" class="category-icon">
+        <h2>Violência urbana, assaltos e crimes de alta periculosidade</h2>
+    </div>
+    <div class="carousel-wrapper">
+        <button class="car-left">‹</button>
         <div class="carousel">
-
-           <div class="carousel-item">
-            <h3><a href="https://www.gov.br/pf" target="_blank">Polícia Federal – SR/PE</a></h3>
-            <p><strong>Telefone:</strong> (81) 2137-4001</p>
-            <p><strong>E-mail:</strong> gab.srpe@pf.gov.br</p>
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/pf/pt-br" target="_blank">Polícia Federal – SR/PE</a></h3>
+                <p>Tel: (81) 3413-9000</p>
             </div>
-
             <div class="carousel-item">
-            <h3><a href="https://sds.pe.gov.br/ouvidoria" target="_blank">Secretaria de Defesa Social de PE</a></h3>
-            <p><strong>Telefone:</strong> 0800 081 5001 / (81) 3183-5298</p>
-            <p><strong>E-mail:</strong> ouvidoria@sds.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://www.gov.br/mj" target="_blank">Ministério da Justiça – Ouvidoria Geral</a></h3>
-            <p><strong>Telefone:</strong> (61) 2025-7999 / 9933</p>
-            <p><strong>E-mail:</strong> ouvidoriageral@mj.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://scge.pe.gov.br/ouvidoria-geral" target="_blank">Ouvidoria Geral do Estado (PE)</a></h3>
-            <p><strong>Telefone:</strong> 162</p>
-            <p><strong>E-mail:</strong> ouvidoria@ouvidoria.pe.gov.br</p>
-        </div>
-        </div>
-        <button class="car-left">‹</button>
-<button class="car-right">›</button>
-        </div>
-    </div>
-
-
-
-    <!-- 🟡 SANEAMENTO / SAÚDE -->
-    <div class="category-row yellow">
-        <div class="category-info">
-            <img src="./icon-saneamento.png" class="category-icon">
-            <h2>Saneamento básico, saúde pública e vigilância sanitária</h2>
-        </div>
-        <div class="ParteBrancaCarrousel-Suport">
-        <div class="carousel-item">
-            <h3><a href="https://www.gov.br/saude" target="_blank">Ministério da Saúde — Ouvidoria do SUS</a></h3>
-            <p><strong>Telefone:</strong> 136</p>
-            <p><strong>E-mail:</strong> (via Fala BR)</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://portal.saude.pe.gov.br/ouvidoria" target="_blank">Secretaria de Saúde de Pernambuco</a></h3>
-            <p><strong>Telefone:</strong> 136</p>
-            <p><strong>E-mail:</strong> ouvidoria@saude.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://www.gov.br/anvisa" target="_blank">ANVISA</a></h3>
-            <p><strong>Telefone:</strong> 0800 642 9782</p>
-            <p><strong>E-mail:</strong> (via Fale Conosco)</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://ibge.gov.br/atendimento" target="_blank">IBGE</a></h3>
-            <p><strong>Telefone:</strong> 0800 721 8181</p>
-            <p><strong>E-mail:</strong> ibge@ibge.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://www.gov.br/mds" target="_blank">MDS – Assistência Social</a></h3>
-            <p><strong>Telefone:</strong> 121</p>
-            <p><strong>E-mail:</strong> (via Ouvidoria)</p>
-        </div>
-
-        </div>
-        <button class="car-left">‹</button>
-<button class="car-right">›</button>
-        </div>
-    </div>
-
-    <!-- 🔵 INFRAESTRUTURA / TRANSPORTE -->
-    <div class="category-row blue">
-        <div class="category-info">
-            <img src="./icon-transporte.png" class="category-icon">
-            <h2>Infraestrutura urbana, transporte público e vias</h2>
-        </div>
-        <div class="ParteBrancaCarrousel-Suport">
-        <div class="carousel-item">
-            <h3><a href="https://servicos.dnit.gov.br/multas" target="_blank">DNIT</a></h3>
-            <p><strong>Telefone:</strong> (61) 3315-4000</p>
-            <p><strong>E-mail:</strong> multas@dnit.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://www.detran.pe.gov.br/fale-conosco" target="_blank">DETRAN-PE</a></h3>
-            <p><strong>Telefone:</strong> (81) 3184-8404 / 8405</p>
-            <p><strong>E-mail:</strong> ouvidoria@detran.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://cttu.recife.pe.gov.br" target="_blank">CTTU – Trânsito do Recife</a></h3>
-            <p><strong>Telefone:</strong> 0800 081 1078 / (81) 3355-5300</p>
-            <p><strong>E-mail:</strong> cttu@recife.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://transparencia.recife.pe.gov.br" target="_blank">Prefeitura do Recife</a></h3>
-            <p><strong>Telefone:</strong> (81) 3355-9001</p>
-            <p><strong>E-mail:</strong> transparencia@recife.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://www.gov.br/inss" target="_blank">INSS</a></h3>
-            <p><strong>Telefone:</strong> 135</p>
-            <p><strong>E-mail:</strong> (via Meu INSS)</p>
-        </div>
-
-        <button class="car-left">‹</button>
-<button class="car-right">›</button>
-        </div>
-    </div>
-
-    <!-- 🟢 MEIO AMBIENTE / ANIMAIS -->
-    <div class="category-row green">
-        <div class="category-info">
-            <img src="./icon-meioambiente.png" class="category-icon">
-            <h2>Meio ambiente e proteção animal</h2>
-        </div>
-        <div class="ParteBrancaCarrousel-Suport">
+                <h3><a href="https://www.sds.pe.gov.br/" target="_blank">Secretaria de Defesa Social de PE</a></h3>
+                <p>Tel: (81) 3181-9700</p>
+            </div>
             <div class="carousel-item">
-            <h3><a href="https://cprh.pe.gov.br" target="_blank">CPRH – Meio Ambiente</a></h3>
-            <p><strong>Telefone:</strong> (81) 3182-8923</p>
-            <p><strong>E-mail:</strong> ouvidoriaambiental@cprh.pe.gov.br</p>
+                <h3><a href="https://www.gov.br/mj/pt-br" target="_blank">Ministério da Justiça – Ouvidoria Geral</a></h3>
+                <p>Tel: 0800 642 4373</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.pe.gov.br/servicos/ouvidoria" target="_blank">Ouvidoria Geral do Estado (PE)</a></h3>
+                <p>Tel: 0800 081 2366</p>
+            </div>
         </div>
+        <button class="car-right">›</button>
+    </div>
+</div>
 
-        <div class="carousel-item">
-            <h3><a href="https://alepe.pe.gov.br" target="_blank">ALEPE – Ouvidoria</a></h3>
-            <p><strong>Telefone:</strong> (81) 3183-2211</p>
-            <p><strong>E-mail:</strong> ouvidoria@alepe.pe.gov.br</p>
-        </div>
-
-        <div class="carousel-item">
-            <h3><a href="https://defensoria.pe.def.br/enderecos" target="_blank">Defensoria Pública de Pernambuco</a></h3>
-            <p><strong>Telefone:</strong> (81) 3182-5357</p>
-            <p><strong>E-mail:</strong> atendimento@defensoria.pe.gov.br</p>
-        </div>
-
+<!-- 🟡 SANEAMENTO / SAÚDE -->
+<div class="category-row yellow">
+    <div class="category-info">
+        <img src="./Group 47.png" class="category-icon">
+        <h2>Saneamento básico, saúde pública e vigilância sanitária</h2>
+    </div>
+    <div class="carousel-wrapper">
         <button class="car-left">‹</button>
-<button class="car-right">›</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/saude/pt-br" target="_blank">Ministério da Saúde — Ouvidoria do SUS</a></h3>
+                <p>Tel: 136</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.saude.pe.gov.br/" target="_blank">Secretaria de Saúde de Pernambuco</a></h3>
+                <p>Tel: (81) 3184-7000</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/anvisa/pt-br" target="_blank">ANVISA</a></h3>
+                <p>Tel: 0800 642 9782</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.ibge.gov.br/" target="_blank">IBGE</a></h3>
+                <p>Tel: 0800 721 8181</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/mds/pt-br" target="_blank">MDS – Assistência Social</a></h3>
+                <p>Tel: 0800 707 2003</p>
+            </div>
         </div>
+        <button class="car-right">›</button>
+    </div>
+</div>
+
+<!-- 🔵 INFRAESTRUTURA / TRANSPORTE -->
+<div class="category-row blue">
+    <div class="category-info">
+        <img src="./building-2.png" class="category-icon">
+        <h2>Infraestrutura urbana, transporte público e vias</h2>
     </div>
 
-</div> <!-- fim categories -->
+    <div class="carousel-wrapper">
+        <button class="car-left">‹</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/dnit" target="_blank">DNIT</a></h3>
+                <p>Tel: 0800 016 1010</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.detran.pe.gov.br/" target="_blank">DETRAN-PE</a></h3>
+                <p>Tel: (81) 3181-8000</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.cttu.recife.pe.gov.br/" target="_blank">CTTU – Trânsito do Recife</a></h3>
+                <p>Tel: 156</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.recife.pe.gov.br/" target="_blank">Prefeitura do Recife</a></h3>
+                <p>Tel: (81) 3355-9400</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.gov.br/inss/pt-br" target="_blank">INSS</a></h3>
+                <p>Tel: 135</p>
+            </div>
+        </div>
+        <button class="car-right">›</button>
+    </div>
+</div>
 
+<!-- 🟢 MEIO AMBIENTE / ANIMAIS -->
+<div class="category-row green">
+    <div class="category-info">
+        <img src="./leaf.png" class="category-icon">
+        <h2>Meio ambiente e proteção animal</h2>
+    </div>
+    <div class="carousel-wrapper">
+        <button class="car-left">‹</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <h3><a href="https://www.icmbio.gov.br/" target="_blank">ICMBio – Instituto Chico Mendes</a></h3>
+                <p>Tel: (61) 2020-9000</p>
+            </div>
+            <div class="carousel-item">
+                <h3><a href="https://www.ongpet.org.br/" target="_blank">ONG PET – Proteção Animal</a></h3>
+                <p>Tel: (81) 98765-4321</p>
+            </div>
+        </div>
+        <button class="car-right">›</button>
+    </div>
+</div>
+
+</div>
+</div>
 </main>
 
-<!-- BOTÃO VOLTAR -->
-<button class="InferiorEsquerdaButton-Suport">Voltar</button>
+<!-- BOTÕES FIXOS -->
+<button class="InferiorEsquerdaButton-Suport" onclick="window.history.back()">Voltar</button>
 
-<!-- BOTÕES LATERAIS -->
 <div class="sideFloatingButtons-Suport">
-    <button class="sideButton-Suport">
-        <img src="./feedback.png">
-        <div>
-            <span>Chat</span><br>
-            <small>Interativo</small>
-        </div>
+    <button class="sideButton-Suport" onclick="window.location.href='https://api.whatsapp.com/send?phone=5581999999999'">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+        Contato
     </button>
-
-    <button class="sideButton-Suport">
-        <img src="./conversations.png">
-        <div>
-            <span>Perguntas</span><br>
-            <small>Enquetes</small>
-        </div>
+    <button class="sideButton-Suport" onclick="window.location.href='mailto:contato@humap.srv.br'">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        Email
     </button>
 </div>
- <script>
-        const hamburger = document.getElementById("hamburger");
-        const menu = document.getElementById("menu");
-        const btnClose = document.getElementById("btn-close");
-        const notifBox = document.getElementById("notif-box");
-        const notifyBtn = document.getElementById("notifyBtn");
 
-        // ABRE MENU
-        hamburger.onclick = () => {
-            menu.classList.add("open");
-        };
+<script>
+/* Menu */
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+hamburger.addEventListener('click', () => { menu.classList.toggle('open'); });
 
-        
-        btnClose.onclick = () => {
-            menu.classList.remove("open");
-        };
-
-        // NOTIFICAÇÕES (abre/fecha)
-        notifyBtn.onclick = (e) => {
-            e.stopPropagation();
-            notifBox.classList.toggle("open");
-        };
-
-        // Fechar notificações ao clicar fora
-        document.body.onclick = () => {
-            notifBox.classList.remove("open");
-        };
-        document.body.addEventListener("click", (e) => {
-    if(!menu.contains(e.target) && !hamburger.contains(e.target)) {
-        menu.classList.remove("open");
-    }
+document.querySelectorAll('.car-left').forEach((btn, idx) => {
+    const carousel = btn.nextElementSibling;
+    btn.addEventListener('click', () => { carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' }); });
 });
-/*Atualização do carrosel*/
-document.querySelectorAll(".carousel").forEach((c)=>{
 
-    let items = Array.from(c.children);
-    let index = 1;
-
-    const update = ()=>{
-        items.forEach(i=>i.classList.remove("active"));
-        if(items[index]) items[index].classList.add("active");
-        c.scrollTo({
-            left: items[index].offsetLeft - (c.clientWidth/2 - items[index].clientWidth/2),
-            behavior: "smooth"
-        });
-    };
-
-    update();
-
-    let parent = c.parentElement;
-
-    parent.querySelector(".car-right").onclick=()=>{
-        index = Math.min(index + 1, items.length -1);
-        update();
-    };
-
-    parent.querySelector(".car-left").onclick=()=>{
-        index = Math.max(index - 1, 0);
-        update();
-    };
-
+document.querySelectorAll('.car-right').forEach((btn, idx) => {
+    const carousel = btn.previousElementSibling;
+    btn.addEventListener('click', () => { carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' }); });
 });
+
+function goToSearch(){ alert('Função de busca não implementada.'); }
+function showSuggestions(){ /* Aqui você pode implementar sugestões */ }
 </script>
+
 </body>
 </html>
